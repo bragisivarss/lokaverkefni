@@ -12,12 +12,18 @@ class _HomePageScreenState extends State<HomePageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
-        title: const Text('Welcome *USER*'),
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+        title: Text('Welcome *USER*',
+        style: TextStyle(
+          color: Theme.of(context).colorScheme.onPrimaryContainer
+        ),
+        ), 
       ),
-      drawer: const MainDrawer(),
+      drawer: const MainDrawer(
+        
+      ),
       body: const Column(
         children: [
           Text('Hello'),
